@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>My Resume</title>
   <style>
     body {
-      background-color: #2e2e2e; /* Dark gray background */
-      color: #fafafa; /* Light gray text */
-      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #333;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+    }
+    .section-content {
+      padding: 20px;
     }
     .section {
-      background-color: #fafafa; /* Light gray section background */
-      padding: 2em;
-      margin: 1em;
-    }
-    h1, h2, h3 {
-      color: #009432; /* Green headings */
-    }
-    a {
-      color: #009432; /* Green links */
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 40px;
     }
   </style>
-  <title>Resume</title>
 </head>
 <body>
   <div class="section">
-    <h1>Sandeep Srinivas</h1>
-    <h3>Programmer Analyst</h3>
-    <h2>Contact Information</h2>
-    <ul>
-      <li>Email: <a href="mailto:sandeepsrinivas7@gmail.com">sandeepsrinivas7@gmail.com</a></li>
-      <li>Phone: (+91) 8847257600</li>
-    </ul>
+    <h1 class="section-title">Contact Information</h1>
+    <div class="section-content">
+      <p><strong>Name:</strong> Sandeep Srinivas</p>
+      <p><strong>Email:</strong> sandeepsrinivas7@gmail.com</p>
+      <p><strong>Phone:</strong> (+91) 8847257600</p>
+    </div>
   </div>
   <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, C, Java</li>
-      <li>Salesforce</li>
-      <li>Selenium, Automation Testing</li>
-      <li>IoT, Computer Networks</li>
-    </ul>
+    <h1 class="section-title">Education</h1>
+    <div class="section-content">
+      <h3>Bachelor of Technology in Computer Science</h3>
+      <p><strong>Lovely Professional University</strong></p>
+      <p>Graduated: Jun 2020</p>
+    </div>
   </div>
   <div class="section">
-    <h2>Experience</h2>
-    <h3>Programmer Analyst - Cognizant</h3>
-    <p>
-      Project: Emblem Health
-      Helped solve/design various types of user stories by testing and debugging in the sandbox.
-      Created and deployed SFDC custom objects, page layouts, custom tabs and components to suit the needs of client.
-      Consulted on troubleshooting and defect resolution including various incidents, service requests and CRM ticket management on the Salesforce Service Cloud.
-      Collaborated with the team to implement new features and debug the code base.
-      Demonstrated effective verbal, written, and listening communication skills.
-    </p>
+    <h1 class="section-title">Experience</h1>
+    <div class="section-content">
+      <h3>Programmer Analyst</h3>
+      <p><strong>Cognizant</strong></p>
+      <p>JDec 2020 - Present</p>
+      <ul>
+        <li>Project: Emblem Health</li>
+        <li>Helped solve/design various types of user stories by testing and debugging in the sandbox.</li>
+        <li>Created and deployed SFDC custom objects, page layouts, custom tabs and components to suit the needs of client.</li>
+        <li>Consulted on troubleshooting and defect resolution including various incidents, service requests and CRM ticket management on the Salesforce Service Cloud.</li>
+        <li>Collaborated with the team to implement new features and debug the code base.</li>
+        <li>Demonstrated effective verbal, written, and listening communication skills.</li>
+      </ul>
+      <h3>Intern</h3>
+      <p><strong>Cognizant</strong></p>
+      <p>Feb 2020 - Jun 2020</p>
+      <ul>
+        <li>Worked with software developers to help troubleshoot any issues found</li>
+        <li>Trained on CRM Management</li>
+        <li>Logging and tracking of defects using Jira<li>
+        <li>Learnt Salesforce using Trailhead</li>
+      </ul>
+    </div>
   </div>
   <div class="section">
-    <h2>Education</h2>
-    <h3>Bachelor of Technology in Computer Science - Lovely Professional University</h3>
-    <p>
-      
-    </p>
+    <h1 class="section-title">Skills</h1>
+    <div class="section-content">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Languages: Python, Java, C</li>
+        <li>Salesforce: Admin, Lightning Components, SQL</li>
+        <li>Testing: Selenium, Automation Testing</li>
+        <li>Other: Computer Networks, IoT</li>
+      </ul>
+  </div>
   </div>
 </body>
 </html>
