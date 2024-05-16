@@ -427,67 +427,183 @@
    color: rgba(94, 234, 212, 0.85)
 }
 
-@media screen and (max-width: 768px) {
-    .main {
-        flex-direction: column;
-        padding: 0 4vw;
-        width: 92vw;
-    }
+@media (max-width: 1200px) {
+   .main {
+       padding: 0 2vw;
+       width: 96vw
+   }
 
-    .hero {
-        width: 100%;
-        padding: 7vh 0;
-    }
+   .intro p {
+       max-width: 100%;
+       font-size: 16px;
+       color: #94a3b8
+   }
 
-    .intro h1 {
-        font-size: 36px;
-    }
+   .main .hero {
+       padding: 7vh 0 7vh 3em;
+       width: 45%;
+       height: 86vh
+   }
 
-    .intro h4 {
-        margin-bottom: 20px;
-    }
+   .content {
+       width: 55%;
+       height: calc(100vh - 15vh);
+       padding: 6vh 0 3vh
+   }
+}
 
-    .intro p {
-        max-width: 100%;
-        font-size: 16px;
-    }
+@media (max-width: 1000px) {
+   .main {
+       padding: 0 1vw;
+       width: 98vw
+   }
 
-    .content {
-        width: 100%;
-        padding: 7vh 0;
-    }
+   .main .hero {
+       padding: 7vh 0 7vh 2em;
+       width: 45%;
+       height: 86vh
+   }
 
-    .about,
-    .journey {
-        padding: 3em 0;
-    }
+   .content {
+       width: 55%;
+       height: calc(100vh - 15vh);
+       padding: 3vh 0 2vh
+   }
+}
 
-    .lesson {
-        width: 100%;
-        margin: 1em 0;
-        padding: 0.5em;
-    }
+@media (max-width: 925px) {
+   .main {
+       height: 100%
+   }
 
-    .lesson-intro {
-        padding-left: 0;
-    }
+   .main {
+       padding: 0;
+       width: 100vw;
+       display: flex;
+       position: relative;
+       align-items: center
+   }
 
-    .lesson-details {
-        padding: 0 10px;
-    }
+   .main,
+   .main .hero {
+       flex-direction: column
+   }
 
-    .lesson-details h4 {
-        font-size: 16px;
-    }
+   .main .hero {
+       padding: 7vh 0;
+       width: 85% !important;
+       height: 85% !important;
+       justify-content: center
+   }
 
-    .lesson-details p {
-        font-size: 14px;
-    }
+   .menu {
+       display: none
+   }
 
-    .social {
-        flex-direction: column;
-        gap: 20px;
-    }
+   .content {
+       color: #fff;
+       align-items: center;
+       width: 80% !important;
+       height: 100% !important;
+       padding: 3vh 0 0;
+       overflow-y: unset
+   }
+
+   .content .about {
+       padding-top: 5vh;
+       width: 100%
+   }
+
+   .content .end {
+       padding: 5em 1em
+   }
+
+   .lesson {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: none;
+       backdrop-filter: none;
+       color: rgba(255, 255, 255, 0.8);
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
+
+   .lesson-details h4,
+   .project-details h4 {
+       color: #fff
+   }
+
+   .lesson:hover {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: none;
+       backdrop-filter: none;
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
+
+   .lesson:hover .lesson-details h4,
+   .lesson:hover .project-details h4 {
+       color: #fff
+   }
+}
+
+@media (max-width: 500px) {
+   .main {
+       padding: 0;
+       height: 100% !important;
+       width: 100vw;
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       align-items: center
+   }
+
+   .github,
+   .resume {
+       width: 150px
+   }
+
+   .lesson {
+       flex-direction: column
+   }
+
+   .lesson-intro {
+       width: 100%
+   }
+
+   .icon-intro,
+   .lesson-intro {
+       padding: 0 0 1em
+   }
+
+   .main .hero {
+       padding: 7vh 0;
+       width: 90% !important;
+       height: auto !important;
+       flex-direction: column;
+       justify-content: center
+   }
+
+   .menu {
+       display: none
+   }
+
+   .content {
+       align-items: center;
+       width: 90% !important;
+       height: 100% !important;
+       padding: 3vh 0 0;
+       overflow-y: unset
+   }
+
+   .content .about {
+       padding-top: 5vh;
+       width: 100%
+   }
+
+   .lesson {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: blur(20px);
+       backdrop-filter: blur(20px);
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
 }
 
 
