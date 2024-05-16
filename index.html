@@ -1,148 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sandeep Srinivas Pogula</title>
+    <meta name="description" content="Developed by Sandeep Srinivas Pogula">
+    <meta name="next-size-adjust">
+    <meta name="referrer" content="no-referrer">
+    <link rel="canonical" href="https://sandeep.me/">
+    <meta http-equiv="content-security-policy" content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-variation-settings:
+              "slnt" 0;
+            font-style: normal;
+            font-weight: 100 900;
+            ascent-override: 90.20%;
+            descent-override: 22.48%;
+            line-gap-override: 0.00%;
+            size-adjust: 107.40%
+        }
+
+        .__className_aaf875 {
+          font-family: "Inter", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: <weight>;
+          font-variation-settings:
+            "slnt" 0;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #0e2b42
+        }
+
+        .circle {
+            z-index: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(89, 229, 199, 0.35);
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+            filter: blur(100px)
+        }
+
+        .main {
+            margin: 0;
+            padding: 0 8vw;
+            width: 85vw;
+            height: 100vh !important;
+            background-color: rgba(255, 255, 255, 0.025);
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            z-index: 1;
+            overflow: hidden; /* Added overflow: hidden to prevent horizontal scrollbar */
+        }
+
+        .hero {
+            padding: 7vh 0 7vh 5em;
+            width: 50%;
+            height: 86vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto; /* Added overflow-y: auto to enable vertical scrolling */
+        }
+
+        .intro h1 {
+            font-size: 48px;
+            color: #e2e8f0;
+            margin-bottom: 0
+        }
+
+        .intro h4 {
+            margin-bottom: 40px;
+            opacity: .8;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(94, 234, 212, 0.85)
+        }
+
+        .intro p {
+            max-width: 70%;
+            font-size: 18px;
+            color: #94a3b8
+        }
+
+        .menu {
+            width: 100px;
+            display: flex;
+            flex-direction: column
+        }
+
+        .menu a {
+            opacity: .8;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all .3s
+        }
+
+        .menu a:hover {
+            padding-left: .5em;
+            letter-spacing: 3px;
+            font-weight: 900;
+            color: rgba(94, 234, 212, 0.85)
+        }
+
+        .resume-link a {
+            opacity: .8;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all .3s
+        }
+
+        .resume-link a:hover {
+            padding-left: 0;
+            color: rgba(94, 234, 212, 0.85)
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 7px
+        }
+
+        .social a img {
+            filter: invert();
+            opacity: .3;
+            width: 30px;
+            transition: all .3s ease-in-out
+        }
+
+        .social a img:hover {
+            transform: scale(1.1);
+            opacity: .5
+        }
+
+        .content {
+            width: 50%;
+            height: calc(100vh - 8vh);
+            padding: 7vh 5em 1vh 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto; /* Added overflow-y: auto to enable vertical scrolling */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .content .end {
+            padding: 5em 1em 0;
+            font-size: 16px;
+            opacity: .85;
+            color: #fff
+        }
+
+        .content .end a {
+            color: rgba(94, 234, 212, 0.85)
+        }
+
+        .content::-webkit-scrollbar {
+            display: none
+        }
+
+        .content .about {
+            padding-top: 5vh;
+            width: 90%
+        }
+
+        .content .about p {
+            font-size: 18px;
+            opacity: .6;
+            color: #d4eeee
+        }
+
+        .content .about p b {
+            color: #5eead4
+        }
+
+        .journey {
+            padding: 5em 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .learning-path .title {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0
+        }
+
+        .learning-path .title2 {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2em
+        }
+
+        .lesson {
+            color: #fff;
+            margin: 1.5em 0;
+            align-items: center;
+            border-radius: 10px;
+            display: flex;
+            overflow: hidden;
+            width: 90%;
+            border: 2px solid rgba(255, 255, 255, 0);
+            padding: 1em;
+            height: auto;
+            transition: all .35s ease
+        }
+
+        .lesson:hover {
+            background-color: rgba(255, 255, 255, 0.025);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(94, 234, 212, 0.5)
+        }
+
+        .lesson h6 {
+            color: #fff;
+            opacity: .6;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        .lesson-intro {
+            align-self: flex-start;
+            color: #fff;
+            padding-top: 5px;
+            padding-left: 10px;
+            width: 30%
+        }
+
+        .lesson-details {
+            padding: 0 20px;
+            position: relative;
+            width: 100%
+        }
+
+        .lesson-details h4 {
+            padding: 0;
+            margin: 0 0 .15em;
+            font-weight: 700;
+            opacity: .8;
+            font-size: 18px;
+            transition: color .3s ease
+        }
+
+        .lesson:hover .lesson-details h4 {
+   color: #fff
+}
+
+.lesson-details h6 {
+   opacity: .6
+}
+
+.lesson-details p {
+   opacity: .6;
+   font-size: 16px
+}
+
+.skills-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 5px
+}
+
+.skill-button {
+   background-color: rgba(94, 234, 212, 0.1);
+   -webkit-backdrop-filter: blur(20px);
+   backdrop-filter: blur(20px);
+   display: inline-block;
+   padding: 2px 12px;
+   margin: 5px 0;
+   border-radius: 15px;
+   text-decoration: none;
+   color: #5eead4;
+   text-align: center;
+   font-size: 13px
+}
+
+.skill-button:hover {
+   color: #fff
+}
+
+.resume {
+   padding-bottom: 5px
+}
+
+.github,
+.resume {
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   color: rgba(94, 234, 212, 0.7);
+   width: 140px;
+   transition: all .3s ease-in-out
+}
+
+.github {
+   padding-bottom: 8px
+}
+
+.github:hover,
+.resume:hover {
+   color: rgba(94, 234, 212, 0.85)
+}
+
+.github:before,
+.resume:before {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(94, 234, 212, 0.85);
+   visibility: hidden;
+   transition: all .3s ease-in-out
+}
+
+.github:hover:before,
+.resume:hover:before {
+   visibility: visible;
+   width: 100%
+}
+
+.project-details {
+   padding: 0 20px;
+   position: relative;
+   width: 100%
+}
+
+.project-details h4 {
+   padding: 0;
+   margin: 0 0 .15em;
+   font-weight: 700;
+   opacity: .8;
+   font-size: 18px;
+   transition: color .3s ease
+}
+
+.project-details h6 {
+   opacity: .6
+}
+
+.project-details p {
+   opacity: .6;
+   font-size: 16px
+}
+
+.icon-intro {
+   justify-content: center;
+   align-self: flex-start;
+   color: #fff;
+   padding-top: 5px;
+   padding-left: 10px;
+   width: 30%
+}
+
+.icon-intro img {
+   width: 60%;
+   opacity: .6
+}
+
+.blo {
+   margin-left: -10px
+}
+
+.link {
+   padding-left: .3em;
+   padding-bottom: .5em;
+   display: flex;
+   flex-direction: row;
+   gap: 20px
+}
+
+.link a {
+   color: rgba(255, 255, 255, 0.65)
+}
+
+.lesson:hover .project-details h4,
+.link a:hover {
+   color: rgba(94, 234, 212, 0.85)
+}
+
+@media (max-width: 1200px) {
+   .main {
+       padding: 0 2vw;
+       width: 96vw
+   }
+
+   .intro p {
+       max-width: 100%;
+       font-size: 16px;
+       color: #94a3b8
+   }
+
+   .main .hero {
+       padding: 7vh 0 7vh 3em;
+       width: 45%;
+       height: 86vh
+   }
+
+   .content {
+       width: 55%;
+       height: calc(100vh - 15vh);
+       padding: 6vh 0 3vh
+   }
+}
+
+@media (max-width: 1000px) {
+   .main {
+       padding: 0 1vw;
+       width: 98vw
+   }
+
+   .main .hero {
+       padding: 7vh 0 7vh 2em;
+       width: 45%;
+       height: 86vh
+   }
+
+   .content {
+       width: 55%;
+       height: calc(100vh - 15vh);
+       padding: 3vh 0 2vh
+   }
+}
+
+@media (max-width: 925px) {
+   .main {
+       height: 100%
+   }
+
+   .main {
+       padding: 0;
+       width: 100vw;
+       display: flex;
+       position: relative;
+       align-items: center
+   }
+
+   .main,
+   .main .hero {
+       flex-direction: column
+   }
+
+   .main .hero {
+       padding: 7vh 0;
+       width: 85% !important;
+       height: 85% !important;
+       justify-content: center
+   }
+
+   .menu {
+       display: none
+   }
+
+   .content {
+       color: #fff;
+       align-items: center;
+       width: 80% !important;
+       height: 100% !important;
+       padding: 3vh 0 0;
+       overflow-y: unset
+   }
+
+   .content .about {
+       padding-top: 5vh;
+       width: 100%
+   }
+
+   .content .end {
+       padding: 5em 1em
+   }
+
+   .lesson {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: none;
+       backdrop-filter: none;
+       color: rgba(255, 255, 255, 0.8);
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
+
+   .lesson-details h4,
+   .project-details h4 {
+       color: #fff
+   }
+
+   .lesson:hover {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: none;
+       backdrop-filter: none;
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
+
+   .lesson:hover .lesson-details h4,
+   .lesson:hover .project-details h4 {
+       color: #fff
+   }
+}
+
+@media (max-width: 500px) {
+   .main {
+       padding: 0;
+       height: 100% !important;
+       width: 100vw;
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       align-items: center
+   }
+
+   .github,
+   .resume {
+       width: 150px
+   }
+
+   .lesson {
+       flex-direction: column
+   }
+
+   .lesson-intro {
+       width: 100%
+   }
+
+   .icon-intro,
+   .lesson-intro {
+       padding: 0 0 1em
+   }
+
+   .main .hero {
+       padding: 7vh 0;
+       width: 90% !important;
+       height: auto !important;
+       flex-direction: column;
+       justify-content: center
+   }
+
+   .menu {
+       display: none
+   }
+
+   .content {
+       align-items: center;
+       width: 90% !important;
+       height: 100% !important;
+       padding: 3vh 0 0;
+       overflow-y: unset
+   }
+
+   .content .about {
+       padding-top: 5vh;
+       width: 100%
+   }
+
+   .lesson {
+       background-color: rgba(255, 255, 255, 0.025);
+       -webkit-backdrop-filter: blur(20px);
+       backdrop-filter: blur(20px);
+       border: 2px solid rgba(94, 234, 212, 0.5)
+   }
+}
+
+
+</style>
 </head>
+<body class="__className_aaf875">
+    <div class="main">
+    <div class="hero">
+           <div class="intro">
+               <h1>Sandeep Srinivas Pogula</h1>
+               <h4>Software Developer</h4>
+           </div>
+           <div class="menu">
+               <a href="#about">About</a>
+               <a href="#experience">Experience</a>
+               <a href="#projects">Projects</a>
+           </div>
+           <div class="social">
+               <a href="https://www.linkedin.com/in/sandeepsrinivas7/" target="_blank" rel="noopener noreferrer">
+                   <img alt="Linkedin Link" src="images/linkedin.png">
+               </a>
+               <a href="https://www.credly.com/badges/d1221ae3-138b-40fc-b654-f082d0bf0bd0" target="_blank" rel="noopener noreferrer">
+                   <img alt="Python for Data Science" src="images/python.png">
+               </a>
+               <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DRBIg1VCfEV8yiRj5swe3Nko7KmfJxTvLv4XLq76%2FobRGUFm9qJ5LZGv8bZeOj71" target="_blank" rel="noopener noreferrer">
+                   <img alt="Salesforce Certified Administrator" src="images/sfdcadmin.png">
+               </a>
+               <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DRBIg1VCfEV8yiRj5swe3Nko7KmfJxTvLv4XLq76%2FobRGUFm9qJ5LZGv8bZeOj71" target="_blank" rel="noopener noreferrer">
+                   <img alt="Salesforce Certified Platform Developer I" src="images/sfdcdev.png">
+               </a>
+           </div>
+           <div class="resume-link">
+               <a target="_blank" href="./cv.pdf">My Resume</a>
+           </div>
+       </div>
+       <div class="content">
+           <div id="experience" class="journey">
+               <div class="learning-path">
+                   <p class="title">Experience</p>
+                   <div class="lesson">
+                       <div class="lesson-intro">
+                           <h6>Dec 2020 - June 2023</h6>
+                       </div>
+                       <div class="lesson-details">
+                           <h4>Cognizant</h4>
+                           <h6>Programmer Analyst</h6>
+                           <p>• Developed robust Python and JavaScript web applications for Emblem Health, a 3.1M member healthcare insurer, adhering to HIPAA compliance.<br>
+• Implemented Python ETL pipeline optimizing data ingestion, reducing processing time by 27%.<br>
+• Engineered reactive web apps using React/Angular for 800K+ Emblem Health users, ensuring intuitive UX.<br>
+• Collaborated on RESTful APIs with Flask, improving operational efficiency by 19%.<br>
+• Built data analysis pipelines with NumPy/Pandas for executive decision-making.<br>
+• Optimized computational complexity via advanced data structures and algorithms, boosting performance.<br>
+• Conducted code reviews, collaborated closely with cross-functional teams to implement new features, leveraging effective communication skills to gather requirements, provide guidance, ensure seamless integration, and enforce coding standards and best practices.</p  >
+                           <div class="skills-container">
+                               <a class="skill-button">Python</a>
+                               <a class="skill-button">Data Analysis</a>
+                               <a class="skill-button">HTML</a>
+                               <a class="skill-button">CSS</a>
+                               <a class="skill-button">JS</a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="lesson">
+                       <div class="lesson-intro">
+                           <h6>Feb 2020 - June 2021</h6>
+                       </div>
+                       <div class="lesson-details">
+                           <h4>Cognizant</h4>
+                           <h6>Intern</h6>
+                           <p>• Conducted user research & feedback gathering insights on product ideas & features for Salesforce Service Cloud.<br>
+• Led the resolution of various user stories by debugging, testing, and deploying solutions to production.<br>
+• Played a key role in the customization of SFDC (Salesforce) by creating and deploying custom objects, page layouts, custom tabs, and components, tailoring them to align with the specific needs and requirements of the client.<br>
+• Acted as a consultant for troubleshooting and defect resolution, handling incidents, service requests, and CRM ticket management on the Salesforce Service Cloud.<br>
+• Acquired proficiency in Salesforce CRM Management through hands-on learning using Trailhead, gaining valuable insights into the platform's capabilities and functionalities.<br>
+• Effectively logged and tracked defects using Jira, ensuring prompt identification and resolution of issues.</p>
+                           <div class="skills-container">
+                               <a class="skill-button">Salesforce</a>
+                               <a class="skill-button">CRM</a>
+                               <a class="skill-button">LWC</a>
+                               <a class="skill-button">Admin</a>
+                               <a class="skill-button">SQL</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <a target="_blank" href="./cv.pdf" class="resume">View Full Resume ›</a>
+           </div>
+           <div id="projects" class="projects">
+               <div id="experience" class="journey">
+                   <div class="learning-path">
+                       <p class="title2">Projects</p>
+                       <div class="lesson">
+                           <div class="icon-intro">
+                               <div class="blo">
+                                   <img alt="Project Icon" src="project-icon-placeholder.png">
+                               </div>
+                           </div>
+                           <div class="project-details">
+                               <h4>Analysing 15 Years of News Headlines</h4>
+                               <h6>Machine Learning</h6>
+                               <p>This project explores 15 years of news headlines through topic modeling and sentiment analysis, aiming to uncover evolving patterns and trends in media discourse. By analyzing 4.5 million headlines from top US news outlets, it provides valuable insights into societal shifts and the emotional tone of news coverage over time.</p>
+                               <div class="link">
+                                   <a href="https://sandeepsrinivas7.github.io/ai-research-project/" target="_blank">View Project↗</a>
+                               </div>
+                               <div class="skills-container">
+                                   <a class="skill-button">Python</a>
+                                   <a class="skill-button">Data Analysis</a>
+                                   <a class="skill-button">Machine Learning</a>
+                                   <a class="skill-button">HTML UI</a>
+                                   <a class="skill-button">CSS</a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="lesson">
+                           <div class="icon-intro">
+                               <div class="blo">
+                                   <img alt="Project Icon" src="project-icon-placeholder.png">
+                               </div>
+                           </div>
+                           <div class="project-details">
+                               <h4>Conference Management System</h4>
+                               <h6>Salesforce</h6>
+                               <p>Built a software interface using Salesforce for managing, creating and booking multiple conferences. It can be used to create and assign a speaker to a conference session or multiple conferences. Added Google Maps API to search, contact and choose a venue for conferences. Also added a payment gateway for users to book sessions.</p>
+                               <div class="skills-container">
+                                   <a class="skill-button">Salesforce Admin</a>
+                                   <a class="skill-button">LWC</a>
+                                   <a class="skill-button">JS</a>
+                                   <a class="skill-button">SQL</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div id="circle" class="circle" style="left: 1380px; top: 51px;"></div>
 
-<body>
-  <div class="container">
-    <div class="profile">
-      <div class="profile_container">
-        <div class="profile_profileImg">
-          <img src="./images/profileImage.png" alt="Sandeep Srinivas">
-        </div>
-        <div>
-          <h1 class="profile_name">
-            <span class="profile_name_firstName">Sandeep Srinivas</span>
-            <span class="profile_name_lastName">Pogula</span>
-          </h1>
-          <p class="profile_title">Programmer Analyst</p>
-          <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
-        </div>
-      </div>
-    </div>
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">Expertise</h3>
-        <ul class="skills_list description">
-          <li>Languages: Python, Java, C</li>
-          <li>Salesforce: Admin, Lightning Components, SQL</li>
-          <li>Testing: Selenium, Automation Testing</li>
-          <li>Other: Computer Networks, IoT</li>
-        </ul>
-      </div>
-      <div class="edu">
-        <h3 class="title">Education</h3>
-        <div class="edu_item">
-          <p class="item_preTitle">2017-2020</p>
-          <h4 class="item_title">Bachelor of Technology in Computer Science</h4>
-          <p class="item_subtitle">
-            Lovely Professional University
-          </p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2014-2017</p>
-          <h4 class="item_title">Electronics & Communication Engineering</h4>
-          <p class="item_subtitle">
-            Lovely Professional University
-          </p>
-        </div>
-      </div>
+   <next-route-announcer style="position: absolute;">
+       <template shadowrootmode="open">
+           <div aria-live="assertive" id="__next-route-announcer__" role="alert"
+               style="position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;">
+           </div>
+       </template>
+   </next-route-announcer>
 
-      <div class="certification">
-        <h3 class="title">certification</h3>
-        <div class="certification_item">
-          <p class="item_preTitle">2020</p>
-           <a href="https://courses.cognitiveclass.ai/certificates/f8b12d1b3467400fb50292500caa7bca" target="_blank" <span>/IBM: Python For Data Science</span> </a>
-           <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DRBIg1VCfEV8yiRj5swe3Nko7KmfJxTvLv4XLq76%2FobRGUFm9qJ5LZGv8bZeOj71" target="_blank" <span>/Salesforce Certified Administrator</span> </a>
-           <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DRBIg1VCfEV8yiRj5swe3Nko7KmfJxTvLv4XLq76%2FobRGUFm9qJ5LZGv8bZeOj71" target="_blank" <span>/Salesforce Certified Platform Developer I</span> </a>
-        </div>
-      </div>
-    </div>
-    <div class="group-2">
-      <div class="exp">
-        <h3 class="title">Experience</h3>
-        <div class="exp_item">
-          <p class="item_preTitle">2020 - present</p>
-          <h4 class="item_title">Cognizant</h4>
-          <p class="item_subtitle">Programmer Analyst</p>
-          <ul class=" description">
-            <li>Project: Emblem Health</li>
-            <li>Helped solve/design various types of user stories by testing and debugging in the sandbox.</li>
-            <li>Created and deployed SFDC custom objects, page layouts, custom tabs and components to suit the needs of client.</li>
-            <li>Consulted on troubleshooting and defect resolution including various incidents, service requests and CRM ticket management on the Salesforce Service Cloud.</li>
-            <li>Collaborated with the team to implement new features and debug the code base.</li>
-            <li>Demonstrated effective verbal, written, and listening communication skills.</li>
-          </ul>
-        </div>
-        <div class="exp_item">
-          <p class="item_preTitle">Feb 2020 - Jun 2020</p>
-          <h4 class="item_title">Cognizant</h4>
-          <p class="item_subtitle">Intern</p>
-          <p class="description">
-            <ul>
-              <li>Worked with software developers to help troubleshoot any issues found</li>
-              <li>Trained on CRM Management</li>
-              <li>Logging and tracking of defects using Jira<li>
-              <li>Learnt Salesforce using Trailhead</li>
-            </ul>
-          </p>
-        </div>
-      <div class="interest">
-        <h3 class="title">Interest</h3>
-        <div class="interest_items">
-          <div class="interest_item">
-            <i data-feather="music"></i>
-            <span>Music</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="book"></i>
-            <span>Books</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="map"></i>
-            <span>Travel</span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <hr>
-    <div class="group-3">
-      <div class="contact">
-        <h3 class="title">Contact</h3>
-        <div class="contact_info">
-          <p class="description">
-            India
-          </p>
-          <p class="description">
-            (+91)-8847257600
-          </p>
-          <p class="description">
-            sandeepsrinivas7@gmail.com
-          </p>
-        </div>
-      </div>
-      <div class="social">
-        <h3 class="title">Socials</h3>
-        <div class="social_items">
-          <a href="https://www.linkedin.com/in/sandeepsrinivas7/" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
-            <span>/sandeepsrinivas7</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-    feather.replace()
-  </script>
+   <script>
+   const circle = document.getElementById('circle');
+ const circleWidth = 400; // Replace with actual circle width if different
+ const circleHeight = 400; // Replace with actual circle height if different
+
+ document.addEventListener('mousemove', (e) => {
+   circle.style.left = `${e.clientX - (circleWidth / 2)}px`;
+   circle.style.top = `${e.clientY - (circleHeight / 2)}px`;
+ });
+</script>
+
+
+   <script data-template-shadow-root>
+       (() => {
+           document.currentScript.remove();
+           processNode(document);
+
+           function processNode(node) {
+               node.querySelectorAll("template[shadowrootmode]").forEach(element => {
+                   let shadowRoot = element.parentElement.shadowRoot;
+                   if (!shadowRoot) {
+                       try {
+                           shadowRoot = element.parentElement.attachShadow({ mode: element.getAttribute("shadowrootmode") });
+                           shadowRoot.innerHTML = element.innerHTML;
+                           element.remove();
+                       } catch (error) { }
+                       if (shadowRoot) {
+                           processNode(shadowRoot);
+                       }
+                   }
+               });
+           }
+       })();
+   </script>
 </body>
-
 </html>
