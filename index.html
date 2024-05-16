@@ -145,9 +145,27 @@
         .social a img {
             filter: invert();
             opacity: .3;
-            width: 30px;
+            width: 40px;
             transition: all .3s ease-in-out
         }
+
+        .social a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.65);
+    transition: color 0.3s ease;
+}
+        .social a:hover {
+    color: rgba(94, 234, 212, 0.85);
+}
+
+        .social a span {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
 
         .social a img:hover {
             transform: scale(1.1);
@@ -582,6 +600,54 @@
        backdrop-filter: blur(20px);
        border: 2px solid rgba(94, 234, 212, 0.5)
    }
+}
+
+        @media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+    }
+
+    .hero,
+    .content {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        max-width: 100%;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .lesson {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lesson-intro,
+    .lesson-details,
+    .project-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon-intro img {
+        width: 80px;
+    }
 }
 
 
